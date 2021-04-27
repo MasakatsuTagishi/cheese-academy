@@ -26,6 +26,10 @@ body{
 /*この下から記述*/
 /*ーーーーーーーーーーー*/
 
+html {
+	scroll-behavior: smooth;
+}
+
 .title_box{
     background: url(../img/img/mainbg.png);
     background-size: cover;
@@ -35,6 +39,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+	opacity: 0.8;
 }
 
 .title_box_title{
@@ -54,6 +59,10 @@ body{
 	border-width: 2px;
 	border-color: #efefef;
 	border-style: solid;
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	background-color: #ffd61b;
 }
 
 .header_box_img {
@@ -143,13 +152,23 @@ h3#ABOUT{
 	justify-content: center;
 }
 
-.section1_box_img div{
-	width: 100%;
+.section1_box_img {
+	display: flex;
+}
+
+.section1_box_img img {
+	width: 25%;
 }
 
 .section1_box_img_1{
 	list-style: none;
 	display: flex;
+}
+
+.section1_box_img_1 li {
+	width: 20%;
+	height: auto;
+	object-fit: contain;
 }
 
 h3#COURSE{
@@ -186,12 +205,15 @@ h3#COURSE{
     width: 50%;
 }
 
-.image_box_text_title{
+.image_box_text_title {
 	font-size: 24px;
 	color: #222222;
 	margin-bottom: 40px;
 }
 
+.COURSE_text {
+	font-size: 14px;
+}
 
 .image_box_image img{
 	width: 100%;
@@ -283,15 +305,19 @@ h3#NEWS{
 
 .item-list {
 	display: flex;
-	align-items: stretch;
-	justify-content: space-between;
+	justify-content: center;
 }
 
 .item-image{
 	margin-bottom: 32px;
 }
 
+.item-image img {
+	width: 30%;
+}
+
 .item-text{
+	font-size: 12px;
 	margin-bottom: 24px;
 }
 
@@ -303,6 +329,7 @@ h3#NEWS{
 	display: flex;
 	flex-direction: column;
 	padding: 16px;
+	width: 30%;
 }
 
 .more{
@@ -339,6 +366,13 @@ h3#ACCESS{
    justify-content: center;
 }
 
+.locationmap_map_map {
+	width: 100%;
+	height: 250px;
+	object-fit: cover;
+	margin-bottom: 40px;
+}
+
 table{
 	display: flex;
 	justify-content: center;
@@ -364,7 +398,109 @@ h3#CONTACT{
    justify-content: center;
 }
 
+.CONTACT_text_1{
+   margin-top: 24px;
+   margin-bottom: 64px;
+   font-size: 18px;
+   display: flex;
+   justify-content: center;
+}
 
+.CONTACT_text_2{
+   display: flex;
+   justify-content: center;
+}
+
+.CONTACT_text_3{
+   display: flex;
+   justify-content: center;
+}
+
+.CONTACT_text_4{
+   display: flex;
+   justify-content: center;
+   margin-top: 32px;
+}
+
+.CONTACT_text_5{
+   display: flex;
+   justify-content: center;
+   margin-bottom: 80px;
+}
+
+
+.form_contact {
+	width: 80%;
+	margin-bottom: 20px;
+	font-size: 14px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.contact_item,
+.contact_body {
+	padding: 10px;
+}
+
+.contact_item {
+	text-align: left;
+	width: 200px;
+}
+
+.contact_body {
+	width: 400px;
+}
+
+.contact_body_body {
+	width: 300px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #bfbfbf;
+	padding: 5px;
+}
+
+.contact_reason {
+	display: block;
+}
+
+.contact_item_item {
+	text-align: left;
+	vertical-align: top;
+	width: 200px;
+	padding: 10px;
+}
+
+.sent {
+	display: flex;
+	justify-content: center;
+	margin-top: 40px;
+	margin-bottom: 80px;
+}
+
+footer {
+	background: #707070;
+	text-align: center;
+}
+
+footer p {
+	font-size: 18px;
+	color: white;
+	padding: 32px;
+}
+
+.pagetop {
+	display: flex;
+	justify-content: flex-end;
+	margin-right: 50px;
+}
+
+.pagetop_txt {
+	background: #707070;
+	font-size: 12px;
+	color: white;
+	text-align: center;
+	padding: 10px;
+}
 
 
 /*どの部分のcssに対して
